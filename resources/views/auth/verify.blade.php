@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('Before proceeding, please check your email for a verification link.') }}
-                    {{ __('If you did not receive the email') }}, <a href="{{ route('verification.resend') }}">{{ __('click here to request another') }}</a>.
+                    {{ __('لطفا جهت فعالسازی حساب کاربری خود ایمیلتان را چک کنید.') }}
+                    {{ __('اگر ایمیلی دریافت نکرده اید') }}, <a href="{{ route('verification.resend') }}">{{ __('برای ارسال ایمیل جدید اینجا کلیک کنید.') }}</a>.
                 </div>
             </div>
         </div>
