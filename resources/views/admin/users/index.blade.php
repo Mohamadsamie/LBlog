@@ -1,8 +1,8 @@
 @extends('admin.layouts.master')
 
 @section('content')
-
-    <table class="table table-hover">
+    <h3 class="p-b-2">لیست کاربران</h3>
+    <table class="table table-hover bg-content">
         <thead>
         <tr>
             <th>نام</th>

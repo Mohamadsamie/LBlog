@@ -1,1 +1,1 @@
-<h3>admin user create</h3>
+@extends('admin.layouts.master')
