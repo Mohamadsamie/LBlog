@@ -8,6 +8,7 @@
             <th>نام</th>
             <th>ایمیل</th>
             <th>نقش</th>
+            <th>وضعیت</th>
             <th>تاریخ عضویت</th>
         </tr>
         </thead>
@@ -23,6 +24,11 @@
                             @endforeach
                         </ul>
                     </td>
+                    @if($user->status == 0)
+                        <td><span class="tag tag-pill tag-danger">غیرفعال</span></td>
+                        @else
+                        <td><span class="tag tag-pill tag-success">فعال</span></td>
+                    @endif
                     <td>{{Hekmatinasser\Verta\Verta::instance($user->created_at)->formatDifference(\Hekmatinasser\Verta\Verta::today('Asia/Tehran'))}}</td>
                 </tr>
             @endforeach
