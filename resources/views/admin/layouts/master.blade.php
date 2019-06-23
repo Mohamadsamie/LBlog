@@ -204,7 +204,7 @@
         </li>
     </ol>
 
-    <div class="container-fluid">
+    <div class="container-fluid bg-content">
 
         {{--<div class="animated fadeIn">--}}
             {{--<div class="row">--}}

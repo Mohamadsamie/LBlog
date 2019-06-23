@@ -8510,3 +8510,7 @@ base-chart.chart {
 .bg-content{
     background-color: #fff;
 }
+.img-avatar {
+    border-radius: 50em;
+    width: 30%;
+}
