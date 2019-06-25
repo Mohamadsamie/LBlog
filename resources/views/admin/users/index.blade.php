@@ -1,6 +1,21 @@
 @extends('admin.layouts.master')
 
 @section('content')
+    @if(Session::has('delete_user'))
+        <div class="alert alert-danger">
+            <div>{{session('delete_user')}}</div>
+        </div>
+    @endif
+    @if(Session::has('add_user'))
+        <div class="alert alert-success">
+            <div>{{session('add_user')}}</div>
+        </div>
+    @endif
+    @if(Session::has('update_user'))
+        <div class="alert alert-success">
+            <div>{{session('update_user')}}</div>
+        </div>
+    @endif
     <h3 class="p-b-2">لیست کاربران</h3>
     <table class="table table-hover bg-content">
         <thead>
@@ -16,7 +31,7 @@
         <tbody>
             @foreach($users as $user)
                 <tr>
-                    <td><img class="img-avatar" src="{{$user->photo ? $user->photo->path : "http://placehold.it/400"}}" width="80" alt="تصویر نمایه"></td>
+                    <td><img class="img-avatar" src="{{$user->photo ? $user->photo->path : "http://placehold.it/400*400"}}" width="80" alt="تصویر نمایه"></td>
                     <td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
                     <td>{{$user->email}}</td>
                     <td>

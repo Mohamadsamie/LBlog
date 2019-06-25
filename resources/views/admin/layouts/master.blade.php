@@ -98,11 +98,34 @@
             <li class="nav-title">
                 مدیریت کاربران
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('users.create')}}"><i class="icon-user-follow"></i> ثبت کاربر</a>
-                <a class="nav-link" href="{{route('users.index')}}"><i class="icon-people"></i> لیست کاربران</a>
-                <a class="nav-link" href="#"><i class="icon-user-following"></i> دسترسی کاربران</a>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-people"></i> کاربران</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('users.index')}}"><i class="icon-list"></i> لیست کاربران</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('users.create')}}"><i class="icon-user-follow"></i>  ثبت کاربر جدید</a>
+                    </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>--}}
+                    {{--</li>--}}
+                </ul>
             </li>
+            {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="{{route('users.create')}}"><i class="icon-user-follow"></i> ثبت کاربر</a>--}}
+                {{--<a class="nav-link" href="{{route('users.index')}}"><i class="icon-people"></i> لیست کاربران</a>--}}
+                {{--<a class="nav-link" href="#"><i class="icon-user-following"></i> دسترسی کاربران</a>--}}
+            {{--</li>--}}
 
             <li class="nav-title">
                 مدیریت فایل ها
@@ -118,29 +141,7 @@
                 <a class="nav-link" href="#"><i class="icon-people"></i> کاربران</a>
                 <a class="nav-link" href="#"><i class="icon-docs"></i>  فایل ها</a>
             </li>
-            <li class="nav-item nav-dropdown">
-                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-puzzle"></i> ثبت کاربر جدید</a>
-                <ul class="nav-dropdown-items">
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-buttons.html"><i class="icon-puzzle"></i> لیست کاربران</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-social-buttons.html"><i class="icon-puzzle"></i> Social Buttons</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>
-                    </li>
-                </ul>
-            </li>
+
 
             <!--<li class="nav-item nav-dropdown">
                 <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-star"></i> Icons</a>
@@ -207,7 +208,7 @@
     <div class="container-fluid bg-content">
 
         {{--<div class="animated fadeIn">--}}
-            {{--<div class="row">--}}
+            {{--<div class="row">کار--}}
                 {{--<div class="col-sm-6 col-lg-3">--}}
                     {{--<div class="card card-inverse card-primary">--}}
                         {{--<div class="card-block p-b-0">--}}
