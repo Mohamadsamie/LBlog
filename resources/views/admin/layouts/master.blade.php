@@ -121,6 +121,29 @@
                     {{--</li>--}}
                 </ul>
             </li>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-book-open"></i> مطالب</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('posts.index')}}"><i class="icon-list"></i> لیست مطالب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('posts.create')}}"><i class="icon-pencil"></i>  ثبت مطلب جدید</a>
+                    </li>
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>--}}
+                    {{--</li>--}}
+                    {{--<li class="nav-item">--}}
+                        {{--<a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>--}}
+                    {{--</li>--}}
+                </ul>
+            </li>
             {{--<li class="nav-item">--}}
                 {{--<a class="nav-link" href="{{route('users.create')}}"><i class="icon-user-follow"></i> ثبت کاربر</a>--}}
                 {{--<a class="nav-link" href="{{route('users.index')}}"><i class="icon-people"></i> لیست کاربران</a>--}}
