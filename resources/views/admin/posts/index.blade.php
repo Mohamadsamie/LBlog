@@ -1,11 +1,11 @@
 @extends('admin.layouts.master')
 
 @section('content')
-    {{--@if(Session::has('delete_user'))--}}
-        {{--<div class="alert alert-danger">--}}
-            {{--<div>{{session('delete_user')}}</div>--}}
-        {{--</div>--}}
-    {{--@endif--}}
+    @if(Session::has('add_post'))
+        <div class="alert alert-success">
+            <div>{{session('add_post')}}</div>
+        </div>
+    @endif
     {{--@if(Session::has('add_user'))--}}
         {{--<div class="alert alert-success">--}}
             {{--<div>{{session('add_user')}}</div>--}}
