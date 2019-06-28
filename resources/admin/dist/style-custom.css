@@ -1,3 +1,6 @@
 .bg-content{
     background-color: #fff;
 }
+.btn-radius {
+    border-radius: 5px;
+}

@@ -6,16 +6,16 @@
             <div>{{session('add_post')}}</div>
         </div>
     @endif
-    {{--@if(Session::has('add_user'))--}}
-        {{--<div class="alert alert-success">--}}
-            {{--<div>{{session('add_user')}}</div>--}}
-        {{--</div>--}}
-    {{--@endif--}}
-    {{--@if(Session::has('update_user'))--}}
-        {{--<div class="alert alert-success">--}}
-            {{--<div>{{session('update_user')}}</div>--}}
-        {{--</div>--}}
-    {{--@endif--}}
+    @if(Session::has('delete_post'))
+        <div class="alert alert-danger">
+            <div>{{session('delete_post')}}</div>
+        </div>
+    @endif
+    @if(Session::has('update_post'))
+        <div class="alert alert-success">
+            <div>{{session('update_post')}}</div>
+        </div>
+    @endif
     <h3 class="p-b-2">لیست نوشته ها</h3>
     <table class="table table-hover bg-content">
         <thead>

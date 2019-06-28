@@ -32,7 +32,7 @@
                 {{--{!! Form::password('password', null, ['class' => 'form-control']) !!}--}}
             </div>
             <div class="form-group">
-                {!! Form::submit('ذخیره', ['class' => 'btn btn-success']) !!}
+                {!! Form::submit('ذخیره', ['class' => 'btn btn-radius btn-success']) !!}
             </div>
             {!! Form::close() !!}
         </div>

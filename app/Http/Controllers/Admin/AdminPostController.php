@@ -93,7 +93,9 @@ class AdminPostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::with('category')->where('id', $id)->first(); //can access the value of category on edit post page
+        $category = Category::pluck('title','id');
+        return view('admin.posts.edit', compact(['post','category']));
     }
 
     /**
@@ -105,7 +107,34 @@ class AdminPostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+        if ($file = $request->file('featured_image')){
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images' , $name);
+            $photo = new Photo();
+            $photo->name = $file->getClientOriginalName();
+            $photo->path = $name;
+            $photo->user_id = Auth::id();
+            $photo->save();
+
+            $post->photo_id = $photo->id;
+        }
+
+        $post->title = $request->input('title');
+        if ($request->input('slug')){
+            $post->slug = make_slug($request->input('slug'));
+        }   else {
+            $post->slug = make_slug($post->title);
+        }
+        $post->description = $request->input('description');
+        $post->category_id = $request->input('category');
+        $post->meta_description = $request->input('meta_description');
+        $post->meta_keywords = $request->input('meta_keywords');
+        $post->status = $request->input('status');
+        //$post->user_id = Auth::id(); //no need to update user id
+        $post->save();
+        Session::flash('update_post', 'مطلب با موفقیت ویرایش شد.');
+        return redirect('/admin/posts');
     }
 
     /**
@@ -116,6 +145,13 @@ class AdminPostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $photo = Photo::findOrFail($post->photo_id);
+        unlink(public_path() . $post->photo->path); // remove img file from public dir
+        $photo->delete();
+        $post->delete();
+
+        Session::flash('delete_post', 'مطلب با موفقیت حذف شد.');
+        return redirect('admin/posts');
     }
 }

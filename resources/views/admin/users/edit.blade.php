@@ -35,14 +35,14 @@
                 {{--{!! Form::password('password', null, ['class' => 'form-control']) !!}--}}
             </div>
             <div class="form-group">
-                {!! Form::submit('بروزرسانی', ['class' => 'btn btn-success']) !!}
+                {!! Form::submit('بروزرسانی', ['class' => 'btn btn-radius btn-success']) !!}
             </div>
             {!! Form::close() !!}
 
             {{--Delete Form--}}
             {!! Form::open(['method' => 'DELETE', 'action' => ['Admin\AdminUserController@destroy', $user->id]]) !!}
                 <div class="form-group">
-                    {!! Form::submit('حذف', ['class' => 'btn btn-danger']) !!}
+                    {!! Form::submit('حذف', ['class' => 'btn btn-radius btn-danger']) !!}
                 </div>
             {!! Form::close() !!}
             {{--Delete Form--}}

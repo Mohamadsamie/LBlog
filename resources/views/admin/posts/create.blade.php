@@ -39,7 +39,7 @@
                 {!! Form::select('status', [0=>'پیش نویس', 1=>'منتشر شده'] , 0, ['class' => 'form-control']) !!}
             </div>
             <div class="form-group">
-                {!! Form::submit('ذخیره', ['class' => 'btn btn-success']) !!}
+                {!! Form::submit('ذخیره', ['class' => 'btn btn-radius btn-success']) !!}
             </div>
             {!! Form::close() !!}
         </div>
