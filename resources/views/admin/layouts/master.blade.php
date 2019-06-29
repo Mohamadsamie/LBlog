@@ -107,18 +107,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('users.create')}}"><i class="icon-user-follow"></i>  ثبت کاربر جدید</a>
                     </li>
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>--}}
-                    {{--</li>--}}
                 </ul>
             </li>
             <li class="nav-item nav-dropdown">
@@ -130,25 +118,19 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('posts.create')}}"><i class="icon-pencil"></i>  ثبت مطلب جدید</a>
                     </li>
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-cards.html"><i class="icon-puzzle"></i> Cards</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-forms.html"><i class="icon-puzzle"></i> Forms</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-switches.html"><i class="icon-puzzle"></i> Switches</a>--}}
-                    {{--</li>--}}
-                    {{--<li class="nav-item">--}}
-                        {{--<a class="nav-link" href="components-tables.html"><i class="icon-puzzle"></i> Tables</a>--}}
-                    {{--</li>--}}
                 </ul>
             </li>
-            {{--<li class="nav-item">--}}
-                {{--<a class="nav-link" href="{{route('users.create')}}"><i class="icon-user-follow"></i> ثبت کاربر</a>--}}
-                {{--<a class="nav-link" href="{{route('users.index')}}"><i class="icon-people"></i> لیست کاربران</a>--}}
-                {{--<a class="nav-link" href="#"><i class="icon-user-following"></i> دسترسی کاربران</a>--}}
-            {{--</li>--}}
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-folder-alt"></i> دسته ها</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('categories.index')}}"><i class="icon-list"></i> لیست دسته ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('categories.create')}}"><i class="icon-pencil"></i>  ثبت دسته جدید</a>
+                    </li>
+                </ul>
+            </li>
 
             <li class="nav-title">
                 مدیریت فایل ها

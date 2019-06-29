@@ -5,7 +5,7 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
-class PostCreateRequest extends FormRequest
+class PostEditRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -36,7 +36,6 @@ class PostCreateRequest extends FormRequest
             'title' => 'required|min:10',
             'slug' => Rule::unique('posts')->ignore(request()->post), //To avoid confliction in entire slug of the post!
             'description' => 'required',
-            'featured_image' => 'required',
             'category' => 'required',
             'status' => 'required',
         ];
@@ -45,14 +44,12 @@ class PostCreateRequest extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => 'لطفا برای مطلب عنوانی تعریف کنید.',
-            'title.min' => 'حداقل طول عنوان مطلب 10 کاراکتر میباشد.',
-            'slug.unique' => 'این نام مستعار قبلا انتخاب شده لطفا نام دیگری وارد کنید.',
-            'description.required' => 'لطفا برای مطلب توضیحات تعریف کنید.',
-            'featured_image.required' => 'انتخاب تصویر شاخص برای مطلب الزامیست.',
-            'category.required' => 'انتخاب دسته بندی برای مطلب الزامیست.',
-            'status.required' => 'انتخاب وضعیت برای مطلب الزامیست.',
-
+            'title.required' => 'لطفا عنوان مطلب را وارد کنید',
+            'title.min' => 'عنوان مطلب شما باید بیش از ۱۰ کاراکتر باشد',
+            'slug.unique' => 'این نام مستعار قبلا ثبت شده است',
+            'description.required' => 'لطفا توضیحات مطلب را وارد کنید',
+            'category.required' => 'لطفا دسته بندی این مطلب را انتخاب کنید',
+            'status.required' => 'وضعیت مطلب نامشخص است'
         ];
     }
 }
