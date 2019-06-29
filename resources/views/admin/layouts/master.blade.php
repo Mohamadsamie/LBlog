@@ -16,6 +16,7 @@
     <meta name="author" content="Masoud Salehi">
     <meta name="keyword" content="Bootstrap Data">
     <link rel="stylesheet" href="{{asset('/css/all.css')}}">
+    @yield('styles')
     {{--<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>--}}
     <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
     <title>صفحه مدیریت</title>
@@ -135,17 +136,25 @@
             <li class="nav-title">
                 مدیریت فایل ها
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="icon-docs"></i> لیست فایل ها</a>
+            <li class="nav-item nav-dropdown">
+                <a class="nav-link nav-dropdown-toggle" href="#"><i class="icon-folder-alt"></i> رسانه ها</a>
+                <ul class="nav-dropdown-items">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('photos.index')}}"><i class="icon-list"></i> لیست رسانه ها</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('photos.create')}}"><i class="icon-pencil"></i> آپلود رسانه چدید </a>
+                    </li>
+                </ul>
             </li>
 
-            <li class="nav-title">
-                گزارش گیری
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="icon-people"></i> کاربران</a>
-                <a class="nav-link" href="#"><i class="icon-docs"></i>  فایل ها</a>
-            </li>
+            {{--<li class="nav-title">--}}
+                {{--گزارش گیری--}}
+            {{--</li>--}}
+            {{--<li class="nav-item">--}}
+                {{--<a class="nav-link" href="#"><i class="icon-people"></i> کاربران</a>--}}
+                {{--<a class="nav-link" href="#"><i class="icon-docs"></i>  فایل ها</a>--}}
+            {{--</li>--}}
 
 
             <!--<li class="nav-item nav-dropdown">
@@ -588,6 +597,7 @@
         </span>
 </footer>
 <script src="{{asset('/js/all.js')}}" type="application/javascript"></script>
+@yield('scripts')
 <!-- Bootstrap and necessary plugins -->
 {{--<script src="js/libs/jquery.min.js"></script>--}}
 {{--<script src="js/libs/tether.min.js"></script>--}}

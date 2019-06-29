@@ -39,7 +39,6 @@ class CategoryEditRequest extends FormRequest
             'meta_keywords' => 'required',
         ];
     }
-
     public function messages()
     {
         return [
