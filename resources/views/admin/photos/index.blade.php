@@ -38,5 +38,8 @@
         </tbody>
     </table>
 
+        <div class="col-md-12 paginate-center">{{$photos->links()}}</div>
+
+
 
 @endsection

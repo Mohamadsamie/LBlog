@@ -21,7 +21,7 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-        $users = User::with('roles')->get(); //EAGER LOADING (How to access other relations through Eloquent)
+        $users = User::with('roles')->paginate(5); //EAGER LOADING (How to access other relations through Eloquent)
         return  view('admin.users.index', compact(['users']));
     }
 
